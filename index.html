@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <nav>
+            <ul>
+                <li><a href="https://blog.naver.com/seopurply/223662183566">Writing</a></li>
+                <li><a href="https://grafolio.ogq.me/profile/Purply/profile">Photography</a></li>
+                <li><a href="https://www.instagram.com/__uavy/">Instagram</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="activities">
+        <div class="activity" data-category="Writing">
+            <img src="image/Writing.jpg" alt="Writing" class="activity-img" 
+                 data-title="Writing Activity"  
+                 data-description="서소문 기자단 활동 [4월~11월]" 
+                 data-link="https://blog.naver.com/seopurply/223662183566" />
+        </div>
+    
+        <div class="activity" data-category="Photography">
+            <img src="image/Photography.jpeg" alt="Photography" class="activity-img" 
+                 data-title="Photography Activity"
+                 data-description="Photography Portfolio"
+                 data-link="https://grafolio.ogq.me/profile/Purply/profile" />
+        </div>
+    
+    </section>
+    
+    <footer>
+        <p>© By Youjin SEO</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const activityImages = document.querySelectorAll('.activity-img');
+    
+        activityImages.forEach(img => {
+            img.addEventListener('click', function() {
+                const link = this.getAttribute('data-link');
+                if (link) {
+                    window.location.href = link; // 클릭하면 새로운 페이지로 이동
+                }
+            });
+        });
+    });
+    </script> 
+</body>
+</html>
